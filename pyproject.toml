@@ -7,7 +7,21 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+sqlalchemy = "^2.0.0"
+sqlalchemy-stubs = "^0.4"
+mypy = "^0.991"
+python-dotenv = "^0.21.1"
+loguru = "^0.6.0"
+aiohttp = "^3.8.3"
+fastapi = "^0.89.1"
+alembic = "^1.9.2"
+psycopg = "^3.1.8"
 
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+ruff = "^0.0.241"
+pytest = "^7.2.1"
 
 [build-system]
 requires = ["poetry-core"]
