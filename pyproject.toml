@@ -16,6 +16,7 @@ aiohttp = "^3.8.3"
 fastapi = "^0.89.1"
 alembic = "^1.9.2"
 psycopg = "^3.1.8"
+python-telegram-bot = "^20.1"
 
 
 [tool.poetry.group.dev.dependencies]

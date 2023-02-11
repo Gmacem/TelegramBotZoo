@@ -26,6 +26,7 @@ target_metadata = Base.metadata
 # my_important_option = config.get_main_option("my_important_option")
 # ... etc.
 from en_collector.env import CONNECTION_STRING
+from en_collector.database.tables import *
 
 
 def run_migrations_offline() -> None:

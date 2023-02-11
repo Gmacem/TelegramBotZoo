@@ -13,7 +13,7 @@ class Clients(Base):
 class Words(Base):
     __tablename__: str = 'words'
 
-    id: Column[int] = Column('id', int, primary_key=True)
+    id: Column[int] = Column('id', Integer, primary_key=True)
     word: Column[str] = Column('word', String, unique=True, nullable=False)
     transcription: Column[str] = Column('transcription', String)
     translations: Column[str] = Column('default_translation', String)
@@ -22,7 +22,8 @@ class Words(Base):
 class Guesses(Base):
     __tablename__: str = 'guesses'
 
-    id: Column[int] = Column('id', int, primary_key=True)
+    id: Column[int] = Column('id', Integer, primary_key=True)
+    chat_id: Column[int] = Column('chat_id', ForeignKey('clients.chat_id'))
     word_id: Column[int] = Column('word_id', ForeignKey('words.id'))
     success_count: Column[int] = Column('success_count', Integer, nullable=False, default=0)
     failure_count: Column[int] = Column('failure_count', Integer, nullable=False, default=0)
